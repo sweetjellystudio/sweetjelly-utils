@@ -1,0 +1,16 @@
+{
+  "name": "com.sweetjelly.utils",
+  "version": "1.0.0",
+  "displayName": "SWeetJelly Utilities",
+  "description": "This is SWeetJelly utilities",
+  "unity": "2022.3",
+  "dependencies": {
+    "com.unity.cinemachine": "2.9.7",
+    "com.unity.textmeshpro": "3.0.6"
+ },
+  "author": {
+    "name": "SweetJellyStudio",
+    "email": "sweetjellystudio@gmail.com",
+    "url": "https://www.sweetjellystudio.com"
+  }
+}
