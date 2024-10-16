@@ -1,54 +1,12 @@
-﻿using System;
+using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq.Expressions;
 using System.Reflection;
 using System.Text;
-using UnityEngine;
-using UnityEngine.UI;
-using Random = UnityEngine.Random;
 
 namespace SWeetJelly
 {
-    public static class CoreExtensions
+    public static class ObjectExtensions
     {
-        #region Int
-        /// <summary>
-        /// Set random sign
-        /// </summary>
-        public static int SetRandomSign(this int value)
-        {
-            return value * Random.value < 0.5f ? 1 : -1;
-        }
-        #endregion
-
-        #region Float
-        /// <summary>
-        /// Set random sign
-        /// </summary>
-        public static float SetRandomSign(this float value)
-        {
-            return value * Random.value < 0.5f ? 1 : -1;
-        }
-        #endregion
-
-        #region Double
-        /// <summary>
-        /// Set random sign
-        /// </summary>
-        public static double SetRandomSign(this double value)
-        {
-            return value * Random.value < 0.5f ? 1 : -1;
-        }
-        #endregion
-
-        #region RectTransform
-        #endregion
-
-        #region Quaternion
-        #endregion
-
-        #region Object
         private static readonly BindingFlags PUBLIC_BINDING_FLAGS = BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public;
         private static readonly string FIELD_SPACE = "    ";
         private static readonly int MAX_DEPTH = 3;
@@ -136,28 +94,5 @@ namespace SWeetJelly
 
             return stringBuilder.ToString();
         }
-        #endregion
-
-        #region Random
-
-        public static class ExtendedRandom
-        {
-            public static bool TrueFalse()
-            {
-                return Random.Range(0, 2) == 0;
-            }
-
-            public static int Range(DuoInt duoInt)
-            {
-                return Random.Range(duoInt.firstValue, duoInt.secondValue);
-            }
-
-            public static float Range(DuoFloat duoFloat)
-            {
-                return Random.Range(duoFloat.firstValue, duoFloat.secondValue);
-            }
-        }
-
-        #endregion
     }
 }

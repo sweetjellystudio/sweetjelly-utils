@@ -227,5 +227,18 @@ namespace SWeetJelly
 
             return result;
         }
+
+        public static string FindFolderInPackagePath(string folderName)
+        {
+            string packagesPath = System.IO.Path.Combine(Application.dataPath, "../Packages");
+            string resultFolder = FindSubfolder(folderName, packagesPath);
+
+            if (string.IsNullOrEmpty(resultFolder))
+            {
+                Debug.LogWarning("Folder " + folderName + " couldn't be found!");
+            }
+
+            return resultFolder;
+        }
     }
 }

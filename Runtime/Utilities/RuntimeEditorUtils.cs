@@ -36,5 +36,27 @@ namespace SWeetJelly
             return null;
         }
 #endif
+
+        public static void SetDirty(Object obj)
+        {
+#if UNITY_EDITOR
+            EditorUtility.SetDirty(obj);
+#endif
+        }
+
+        public static void ToggleVisibility(this GameObject gameObject, bool state)
+        {
+#if UNITY_EDITOR
+            SceneVisibilityManager.instance.ToggleVisibility(gameObject, state);
+#endif
+        }
+
+        public static void TogglePicking(this GameObject gameObject, bool state)
+        {
+#if UNITY_EDITOR
+            
+            SceneVisibilityManager.instance.TogglePicking(gameObject, state);
+#endif
+        }
     }
 }
