@@ -21,6 +21,19 @@ namespace SWeetJelly
         }
 
         /// <summary>
+        /// Get enum array
+        /// </summary>
+        public static T[] GetEnumArray<T>() where T : struct, IConvertible
+        {
+#if UNITY_EDITOR
+            if (!typeof(T).IsEnum)
+                throw new ArgumentException("T must be an enumerated type");
+#endif
+
+            return (T[])Enum.GetValues(typeof(T));
+        }
+
+        /// <summary>
         /// Get first enum value
         /// </summary>
         public static T GetDefaultEnum<T>() where T : struct, IConvertible

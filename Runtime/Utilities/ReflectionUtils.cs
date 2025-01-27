@@ -5,6 +5,10 @@ namespace SWeetJelly
 {
     public static class ReflectionUtils
     {
+        public static readonly BindingFlags FLAGS_INSTANCE = BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public;
+
+        public static readonly BindingFlags FLAGS_STATIC = BindingFlags.Static | BindingFlags.NonPublic | BindingFlags.Public;
+
         public static readonly BindingFlags FLAGS_INSTANCE_PRIVATE = BindingFlags.Instance | BindingFlags.NonPublic;
         public static readonly BindingFlags FLAGS_INSTANCE_PUBLIC = BindingFlags.Instance | BindingFlags.Public;
 
