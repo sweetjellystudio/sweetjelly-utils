@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace SWeetJelly{
+namespace SWeetJelly
+{
     public static class TransformExtensions
     {
         /// <summary>

@@ -1,5 +1,5 @@
-# Change Log
+# CHANGE LOG
 
-## [1.0.0] - 2024-07-11
+## [1.0.0] 2024-07-11
 
-- first release
+- basic logic
