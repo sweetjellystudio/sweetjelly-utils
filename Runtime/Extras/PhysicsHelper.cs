@@ -8,10 +8,5 @@ namespace SWeetJelly
         public static readonly int LAYER_PLAYER = LayerMask.NameToLayer("Player");
 
         public const string TAG_PLAYER = "Player";
-
-        public static void Init()
-        {
-
-        }
     }
 }

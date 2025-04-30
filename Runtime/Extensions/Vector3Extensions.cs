@@ -54,15 +54,6 @@ namespace SWeetJelly
         }
         
         /// <summary>
-        /// Converts a Vector2 to a Vector3 with a y value of 0.
-        /// </summary>
-        /// <param name="v2">The Vector2 to convert.</param>
-        /// <returns>A Vector3 with the x and z values of the Vector2 and a y value of 0.</returns>
-        public static Vector3 ToVector3(this Vector2 v2) {
-            return new Vector3(v2.x, 0, v2.y);
-        }
-        
-        /// <summary>
         /// Computes a random point in an annulus (a ring-shaped area) based on minimum and 
         /// maximum radius values around a central Vector3 point (origin).
         /// </summary>
@@ -297,6 +288,11 @@ namespace SWeetJelly
                 Random.Range(-halfDepth, halfDepth));
 
             return result;
+        }
+
+        public static Vector3 Rotate(this Vector3 vector, float degree, Vector3 axis)
+        {
+            return Quaternion.AngleAxis(degree, axis) * vector;
         }
 
         public static Vector2 xz(this Vector3 value) => new Vector2(value.x, value.z);
