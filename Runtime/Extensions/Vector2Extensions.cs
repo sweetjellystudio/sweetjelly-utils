@@ -4,6 +4,19 @@ namespace SWeetJelly
 {
     public static class Vector2Extensions
     {
+        public static float AngleBetween(this Vector2 vector1, Vector2 vector2)
+        {
+            float angle = Vector2.Angle(vector1, vector2);
+            Vector3 cross = Vector3.Cross(vector1, vector2);
+
+            if(cross.z > 0)
+            {
+                angle = 360 - angle;
+            }
+
+            return angle;
+        }
+
         /// <summary>
         /// Adds to any x y values of a Vector2
         /// </summary>
@@ -164,12 +177,35 @@ namespace SWeetJelly
         }
 
         /// <summary>
-        /// Convert Vector2 to Vector3
+        /// Convert Vector2 to Vector3 with a z value.
         /// </summary>
+        /// <param name="vector">The Vector2 to convert.</param>
         /// <param name="z">Z value</param>
-        public static Vector3 ToVector3(this Vector2 vector, float z = 0)
+        /// <returns>A Vector3 with the x and y values of the Vector2 and a z value.</returns>
+        public static Vector3 ToVector3WithZ(this Vector2 vector, float z = 0)
         {
             return new Vector3(vector.x, vector.y, z);
+        }
+
+        /// <summary>
+        /// Converts a Vector2 to a Vector3 with a y value.
+        /// </summary>
+        /// <param name="vector">The Vector2 to convert.</param>
+        /// <param name="y">Y value</param>
+        /// <returns>A Vector3 with the x and z values of the Vector2 and a y value.</returns>
+        public static Vector3 ToVector3WithY(this Vector2 vector, float y = 0) {
+            return new Vector3(vector.x, y, vector.y);
+        }
+
+        /// <summary>
+        /// Converts a Vector2 to a Vector3 with a x value.
+        /// </summary>
+        /// <param name="vector">The Vector2 to convert.</param>
+        /// <param name="x">X value</param>
+        /// <returns>A Vector3 with the y and z values of the Vector2 and a x value.</returns>
+        public static Vector3 ToVector3WithX(this Vector2 vector, float x = 0)
+        {
+            return new Vector3(x, vector.x, vector.y);
         }
         #endregion
 
