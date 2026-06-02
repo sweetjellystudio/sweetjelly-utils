@@ -2,7 +2,7 @@
     "name": "SWeetJelly.Utils.Editor",
     "rootNamespace": "SWeetJelly",
     "references": [
-        "GUID:1a23072fb1a89e346b31355710ad9095"
+        "SWeetJelly.Utils"
     ],
     "includePlatforms": [
         "Editor"
