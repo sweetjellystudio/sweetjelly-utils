@@ -503,7 +503,7 @@ namespace SWeetJelly
 
             for(int i=0; i< length; i++)
             {
-                result.Add(collection[index + 1]);
+                result.Add(collection[index + i]);
             }
 
             return result;

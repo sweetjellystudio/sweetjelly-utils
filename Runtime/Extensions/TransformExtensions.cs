@@ -120,7 +120,7 @@ namespace SWeetJelly
         /// <returns>child or null if child is not exists</returns>
         public static Transform TryGetChild(this Transform transform, int index)
         {
-            if (transform.childCount < index)
+            if (index >= 0 && index < transform.childCount)
                 return transform.GetChild(index);
 
             return null;
