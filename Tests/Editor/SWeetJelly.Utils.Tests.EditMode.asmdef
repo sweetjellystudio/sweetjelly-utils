@@ -1,0 +1,21 @@
+{
+    "name": "SWeetJelly.Utils.Tests.EditMode",
+    "rootNamespace": "SWeetJelly.Utils.Tests.EditMode",
+    "references": [
+        "SWeetJelly.Utils"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "noEngineReferences": false
+}
