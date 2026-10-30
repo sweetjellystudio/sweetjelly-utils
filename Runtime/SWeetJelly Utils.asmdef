@@ -2,8 +2,8 @@
     "name": "SWeetJelly.Utils",
     "rootNamespace": "SWeetJelly",
     "references": [
-        "Unity.TextMeshPro",
-        "Unity.Mathematics"
+        "Unity.Mathematics",
+        "UnityEngine.UI"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

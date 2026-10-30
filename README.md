@@ -139,3 +139,14 @@ Utils = technical convenience helpers
 Shared/Foundation = meaningful common contracts
 Feature package = concrete errors, reasons, and policies
 ```
+
+## 2.0.0 migration and installation
+
+Requires Unity 6.3 LTS, com.unity.mathematics 1.3.3 and com.unity.ugui 2.0.0. After publication, install https://github.com/sweetjellystudio/sweetjelly-utils.git#v2.0.0 with Unity Package Manager. Cinemachine and the standalone TMP package are no longer direct dependencies. If your project uses them, declare them for that project's actual needs. Mathematics remains required by Duo conversions; the existing ENABLED_UNITY_MATHEMATICS conditional APIs are not automatically enabled.
+
+Public helper signatures and serialized field names are preserved. A dictionary with mismatched serialized key/value counts now logs the existing error and remains empty instead of partially restoring then throwing an index exception. Matching-data behavior is unchanged. Its Inspector drawer now reserves expanded row height and preserves indentation; invalid lists display an error.
+
+See [architecture][architecture] and the [migration decision][decision]. Tests and Player checks record actual Editor patch/platform separately; this is not a claim of universal platform validation.
+
+[architecture]: ARCHITECTURE.md
+[decision]: docs/adr/0001-dependencies-and-malformed-serialization.md

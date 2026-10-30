@@ -26,7 +26,10 @@ namespace SWeetJelly
             Clear();
 
             if (keys.Count != values.Count)
+            {
                 Debug.LogError("Serialization Error: keys and values count mismatch.");
+                return;
+            }
 
             for (int i = 0; i < keys.Count; i++)
             {
