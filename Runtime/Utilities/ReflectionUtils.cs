@@ -22,7 +22,7 @@ namespace SWeetJelly
 
         public static void InjectInstanceComponent<T>(string variableName, object value, BindingFlags bindingFlags = BindingFlags.NonPublic | BindingFlags.Instance) where T : Object
         {
-            T component = Object.FindObjectOfType<T>(true);
+            T component = Object.FindFirstObjectByType<T>(FindObjectsInactive.Include);
             component?.GetType().GetField(variableName, bindingFlags).SetValue(component, value);
         }
 

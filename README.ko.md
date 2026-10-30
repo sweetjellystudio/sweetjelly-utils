@@ -139,3 +139,14 @@ Utils = technical convenience helper
 Shared/Foundation = 의미 있는 공통 contract
 Feature package = 구체적인 error, reason, policy
 ```
+
+## 2.0.0 이전과 설치
+
+Unity 6.3 LTS, com.unity.mathematics 1.3.3, com.unity.ugui 2.0.0이 필요합니다. 게시 후 Unity Package Manager에서 https://github.com/sweetjellystudio/sweetjelly-utils.git#v2.0.0 을 설치합니다. 사용하지 않는 Cinemachine·독립 TMP 패키지 의존성은 제거했습니다. 소비 프로젝트에서 사용하는 패키지는 그 프로젝트가 직접 선언하세요. Duo 변환 때문에 Mathematics는 필요하며 기존 ENABLED_UNITY_MATHEMATICS 조건부 API는 자동 활성화하지 않습니다.
+
+공개 helper 시그니처와 직렬화 필드명은 유지합니다. 직렬화 dictionary의 key/value 길이가 다르면 기존 오류 로그 후 빈 상태로 종료하며, 부분 복원 뒤 인덱스 예외가 발생하던 동작은 수정했습니다. 정상 데이터는 기존과 동일합니다. Drawer는 펼친 행 높이와 들여쓰기를 올바르게 유지하고 잘못된 목록에는 오류를 표시합니다.
+
+[아키텍처][architecture]와 [이전 결정][decision]을 참고하세요. 실제 검증 Editor 패치·플랫폼은 결과에서 별도로 확인하며 모든 환경 검증을 의미하지 않습니다.
+
+[architecture]: ARCHITECTURE.md
+[decision]: docs/adr/0001-dependencies-and-malformed-serialization.md

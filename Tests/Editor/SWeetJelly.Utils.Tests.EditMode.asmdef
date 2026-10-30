@@ -2,7 +2,9 @@
     "name": "SWeetJelly.Utils.Tests.EditMode",
     "rootNamespace": "SWeetJelly.Utils.Tests.EditMode",
     "references": [
-        "SWeetJelly.Utils"
+        "SWeetJelly.Utils",
+        "SWeetJelly.Utils.Editor",
+        "Unity.Mathematics"
     ],
     "includePlatforms": [
         "Editor"

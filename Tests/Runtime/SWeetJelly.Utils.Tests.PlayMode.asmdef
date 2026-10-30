@@ -1,0 +1,14 @@
+{
+  "includePlatforms": [],
+  "rootNamespace": "SWeetJelly.Utils.Tests.PlayMode",
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "references": [
+    "SWeetJelly.Utils",
+    "UnityEngine.UI"
+  ],
+  "autoReferenced": false,
+  "excludePlatforms": [],
+  "name": "SWeetJelly.Utils.Tests.PlayMode"
+}
